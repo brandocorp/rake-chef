@@ -1,0 +1,6 @@
+require 'rake/chef'
+
+recipe :log do
+  log 'OHAI!'
+end
+
