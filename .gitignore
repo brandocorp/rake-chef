@@ -7,3 +7,8 @@
 /pkg/
 /spec/reports/
 /tmp/
+_builds/
+_cache/
+_projects/
+_steps/
+
