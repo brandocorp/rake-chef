@@ -1,8 +1,6 @@
 # Rake::Chef
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rake/chef`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Provide Rake tasks with Chef Recipe DSL
 
 ## Installation
 
@@ -22,7 +20,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add your recipe tasks to your rake file. You can use resources as you would in 
+`chef-apply`.
+
+```ruby
+
+# Rakefile
+require 'chef/rake'
+
+recipe :log do
+  log 'Hello from rake'
+end
+
+```
+
+Then run your task with the following command
+
+```text
+$ rake chef:recipe:log
+Recipe: (rake-chef cookbook)::(rake-chef recipe)
+  * log[Hello from rake] action write
+  
+```
 
 ## Development
 
