@@ -16,7 +16,7 @@ module Rake
             @chef_client.load_node
             @chef_client.build_node
             run_context = ::Chef::RunContext.new(@chef_client.node, {}, @chef_client.events)
-            recipe = ::Chef::Recipe.new("(rake-chef cookbook)", "(rake-chef recipe)", run_context)
+            recipe = ::Chef::Recipe.new("rake-chef", id, run_context)
             recipe.instance_eval(&block)
             runner = ::Chef::Runner.new(run_context)
             runner.converge
