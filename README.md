@@ -29,7 +29,7 @@ Add your recipe tasks to your rake file. You can use resources as you would in
 require 'chef/rake'
 
 recipe :log do
-  log 'Hello from rake'
+  log 'OHAI'
 end
 
 ```
@@ -38,8 +38,8 @@ Then run your task with the following command
 
 ```text
 $ rake chef:recipe:log
-Recipe: (rake-chef cookbook)::(rake-chef recipe)
-  * log[Hello from rake] action write
+Recipe: rake-chef::log)
+  * log[OHAI] action write
   
 ```
 
@@ -51,7 +51,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rake-chef. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/brandocorp/rake-chef. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
